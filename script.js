@@ -1,3 +1,32 @@
+// Password gate
+(function () {
+  const KEY = 'sketch_auth';
+  const PASS = 'NIP2026';
+  const gate = document.getElementById('password-gate');
+  const form = document.getElementById('gate-form');
+  const input = document.getElementById('gate-input');
+  const error = document.getElementById('gate-error');
+
+  if (sessionStorage.getItem(KEY) === '1') {
+    gate.remove();
+    return;
+  }
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (input.value.trim().toUpperCase() === PASS) {
+      sessionStorage.setItem(KEY, '1');
+      gate.classList.add('hidden');
+      setTimeout(() => gate.remove(), 650);
+    } else {
+      error.style.opacity = '1';
+      input.value = '';
+      input.focus();
+      setTimeout(() => { error.style.opacity = '0'; }, 2500);
+    }
+  });
+})();
+
 // Fade-in on scroll — observe ALL elements with .fade-in class
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {

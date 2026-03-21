@@ -37,6 +37,89 @@ body {
   overflow-x: hidden;
 }
 
+/* ---- PASSWORD GATE ---- */
+#password-gate {
+  position: fixed;
+  inset: 0;
+  background: #080504;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  transition: opacity 0.6s ease;
+}
+
+#password-gate.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.gate-logo {
+  width: min(480px, 80vw);
+  filter: drop-shadow(0 0 40px rgba(232, 105, 26, 0.5));
+}
+
+.gate-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+#gate-input {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid var(--amber);
+  color: #fff;
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  letter-spacing: 0.35em;
+  padding: 12px 20px;
+  text-align: center;
+  outline: none;
+  width: 280px;
+  text-transform: uppercase;
+}
+
+#gate-input::placeholder {
+  color: #4a3a2a;
+  letter-spacing: 0.25em;
+}
+
+.gate-btn {
+  display: inline-block;
+  padding: 14px 48px;
+  border: 2px solid var(--amber);
+  color: var(--amber);
+  font-family: var(--font-heading);
+  font-size: 0.7rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: background 0.3s ease, color 0.3s ease;
+  margin-top: 8px;
+}
+
+.gate-btn:hover {
+  background: var(--amber);
+  color: var(--black);
+}
+
+.gate-error {
+  font-family: var(--font-heading);
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  color: var(--orange);
+  text-transform: uppercase;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  margin: 0;
+}
+
 /* ---- HERO ---- */
 .hero {
   position: relative;
