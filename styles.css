@@ -814,10 +814,6 @@ body {
   transform: scale(1.03);
 }
 
-#colton-card .team-card-bg {
-  object-position: center 30%;
-}
-
 .team-card-info {
   padding: 28px 32px 36px;
   text-align: left;
