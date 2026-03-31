@@ -794,7 +794,7 @@ body {
 
 .team-card-img-wrap {
   width: 100%;
-  height: 320px;
+  aspect-ratio: 3 / 4;
   overflow: hidden;
   flex-shrink: 0;
 }
@@ -807,6 +807,10 @@ body {
   display: block;
   filter: brightness(0.9);
   transition: filter 0.3s ease, transform 0.4s ease;
+}
+
+#colton-card .team-card-bg {
+  object-position: center 30%;
 }
 
 .team-card:hover .team-card-bg {
@@ -1068,7 +1072,21 @@ body {
   }
 
   .team-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .team-card-info {
+    padding: 16px 14px 20px;
+  }
+
+  .team-name {
+    font-size: 1rem;
+  }
+
+  .team-card-info p {
+    font-size: 0.78rem;
+    line-height: 1.6;
   }
 
   .comps-grid {
