@@ -794,15 +794,16 @@ body {
 
 .team-card-img-wrap {
   width: 100%;
-  height: auto;
-  overflow: visible;
+  height: 320px;
+  overflow: hidden;
   flex-shrink: 0;
 }
 
 .team-card-bg {
   width: 100%;
-  height: auto;
-  object-fit: initial;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
   display: block;
   filter: brightness(0.9);
   transition: filter 0.3s ease, transform 0.4s ease;
