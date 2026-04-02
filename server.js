@@ -14,6 +14,7 @@ const mimeTypes = {
   '.gif':  'image/gif',
   '.webp': 'image/webp',
   '.svg':  'image/svg+xml',
+  '.webp': 'image/webp',
   '.ico':  'image/x-icon',
   '.woff2':'font/woff2',
   '.mov': 'video/quicktime',
